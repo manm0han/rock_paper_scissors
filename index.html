@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+</head>
+<body>
+  <script>
+ 	// Your JavaScript goes here!
+ 	function computerPlay(){
+ 		var options = ["rock", "paper", "scissors"];
+ 		var computerSelection = options[Math.floor(Math.random()*options.length)];
+ 		return computerSelection;
+ 	}
+ 	function playRound(playerSelection, computerSelection) {
+ 		var playerSelection = playerSelection.toLowerCase();
+ 		if (playerSelection == "rock" && computerSelection == "scissors") {
+ 			return "User wins!";
+ 		}
+ 		else if (playerSelection == "paper" && computerSelection == "rock") {
+ 			return "User wins!";
+ 		}
+ 		else if (playerSelection == "scissors" && computerSelection == "rock"){
+ 			return "User wins!";
+ 		}
+ 		else if (playerSelection == computerSelection){
+ 			return "Tie. Try again."
+ 		}
+ 		else{
+ 			return "Computer wins."
+ 		}
+
+}
+
+ function game(){
+	var count = 0;
+	while(count < 5){
+		var user_input = prompt("Rock/Paper/Scissors");
+		var computer_input = computerPlay();
+		var result = playRound(user_input,computer_input);
+		console.log(result);
+		if (result == "User wins!" || result == "Computer wins.") {
+		count = count + 1;
+	    }
+	}
+}
+game();
+
+  </script>
+</body>
+</html>
