@@ -1,0 +1,19 @@
+html,body{
+	padding: 0; border: 0; margin: 0;
+	height: 100%;
+}
+
+
+
+
+.images{
+	position: relative;
+	width: 33.33%;
+	height: 100%;
+	padding: 0; border: 0; margin: 0;
+	float: left;
+}
+
+.images:hover{
+	transform: scale(1.01);
+}
